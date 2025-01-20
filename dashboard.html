@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuiltBytes - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #4285f4;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <div class="flag-circle">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag">
+                </div>
+                <select class="form-select" id="language" style="width: auto; margin-right: 15px;">
+                    <option selected>English</option>
+                    <option value="es" disabled>Español</option>
+                    <option value="fr" disabled>Français</option>
+                    <option value="de" disabled>Deutsch</option>
+                    <option value="it" disabled>Italiano</option>
+                </select>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end">
+                <span class="navbar-text" style="color: white;">Hello, User</span>
+                <button class="btn btn-outline-light ms-2" type="button">
+                    Settings
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center"><b style="color: #4ca15c;">GuiltBytes</b> Dashboard</h1>
+        <p class="text-center" style="color: black;">Obesity Free USA!</p>
+
+        <div class="mb-3">
+            <div class="input-group">
+                <select class="form-select" id="search">
+                    <option selected>Select Food/Drinks...</option>
+                    <option value="Soft Drinks">Soft Drinks</option>
+                    <option value="Ice Cream">Ice Cream</option>
+                    <option value="Fast Food Burger">Fast Food Burger</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Cereal">Cereal</option>
+                </select>
+                <button class="btn btn-primary" type="button" id="add-item">Add</button>
+                <button class="btn btn-danger ms-2" type="button" id="remove-item">Remove</button> <!-- Remove button -->
+                <button class="btn btn-success ms-2" type="button" id="save-record">Save</button>
+            </div>
+        </div>
+
+        <!-- Histogram Section -->
+        <div class="d-flex justify-content-center mb-4">
+            <div style="width: 600px;">
+                <canvas id="habitHistogram" width="600" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Did You Know Section -->
+    <div id="fact-display" class="text-center" style="color: #4ca15c; font-weight: bold;"></div>
+
+    <!-- BMI Calculator Section -->
+    <div class="bmi-calculator mt-4">
+        <h3 class="text-center"><b style="color: white;">BMI Calculator</b></h3>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" id="heightFeet" placeholder="Feet" aria-label="Height in Feet" min="0">
+            <input type="number" class="form-control" id="heightInches" placeholder="Inches" aria-label="Height in Inches" min="0" max="11">
+            <input type="number" class="form-control" id="weight" placeholder="Weight (lbs)" aria-label="Weight in Pounds" min="0">
+            <button class="btn btn-success" type="button" id="calculate-bmi">Calculate BMI</button>
+        </div>
+        <div id="bmiResult" class="text-center" style="color: white;"></div>
+        <div id="bmiDescription" class="text-center" style="margin-top: 10px; color: white;"></div>
+    </div>
+    <div>
+
+    <!-- Your Record Section -->
+    <div class="your-record mt-4">
+        <h2 class="text-center">Your Record</h2>
+        
+        <div class="input-group mb-3">
+            <input type="date" class="form-control" id="searchDate" aria-label="Search by date">
+            <button class="btn btn-primary" type="button" id="searchRecord">Search</button>
+        </div>
+        
+        <!-- Search result will appear here -->
+        <div id="search-result" class="text-center"></div> <!-- Updated position -->
+
+        <div id="recordMessage" class="text-center text-danger"></div>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered text-center" id="recordTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Date</th>
+                        <th>Month</th>
+                        <th>Year</th>
+                        <th>Soft Drinks</th>
+                        <th>Ice Cream</th>
+                        <th>Fast Food Burger</th>
+                        <th>Chocolate</th>
+                        <th>Cereal</th>
+                        <th>BMI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Records will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+        <br><br><br><br>
+    </div>
+    
+<footer class="footer">
+    <div class="container d-flex justify-content-between">
+        <div>
+            <p><strong>Contact Us:</strong></p>
+            <ul class="list-unstyled">
+                <li>Phone: (XXX) XXX-XXXX</li>
+                <li>Email: guiltbytes24@gmail.com</li>
+                <li>Location: Guilt Ave, City, State - XXXXX</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>About Us:</strong></p>
+            <ul class="list-unstyled">
+                <li>Nafiul Khalid - Planning & Code</li>
+                <li>Luka Varazi - Planning & Design</li>
+                <li>Anika Chowdhury - Planning & Research</li>
+            </ul>
+        </div>
+    </div>
+    <p class="text-center" style="color: #f5f5f5;">&copy; 2024 GuiltBytes. All rights reserved.</p>
+    <p class="text-center" style="color: black;">Looks like you've hit rock bottom!</p>
+</footer>
+
+    
+    
+        
+
+    <script src="dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

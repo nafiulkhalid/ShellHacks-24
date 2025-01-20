@@ -1,0 +1,93 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    color: #4285f4; /* Google Blue */
+}
+p {
+    color: #34a853; /* Google Green */
+}
+.input-group {
+    max-width: 500px;
+    margin: 0 auto;
+}
+#searchInput {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+footer {
+    background-color: #f1f1f1; /* Light gray background */
+    color: #333; /* Darker text color */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Centered text */
+    position: relative; /* Ensure it stays at the bottom */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}
+.flag-circle {
+    width: 25px; /* Circle size */
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5px; /* Space between flag and dropdown */
+}
+.flag-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the circle */
+}
+.histogram-container {
+    display: flex;              /* Use flexbox to center */
+    justify-content: center;    /* Center horizontally */
+    margin: 20px auto;         /* Center vertically */
+}
+.footer {
+    background-color: #4285f4; /* Same blue color as the navbar */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding for the footer */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+}
+
+.footer .container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.footer ul {
+    padding-left: 0; /* Remove left padding */
+    margin: 0; /* Remove margin */
+}
+
+.footer li {
+    text-align: left; /* Align text to the left */
+    margin-bottom: 5px; /* Optional: spacing between list items */
+}
+
+.footer p {
+    margin: 0; /* Reset margin for paragraphs */
+    text-align: left; /* Centered for the copyright and additional text */
+    color: black;
+}
+
+.bmi-calculator {
+    background-color: #4285f4; /* Light background for the BMI section */
+    padding: 20px;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.your-record {
+    background-color: #f9f9f9; /* Light background for Your Record section */
+    padding: 20px;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.table {
+    margin-top: 20px; /* Space between search and table */
+}
