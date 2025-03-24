@@ -1,5 +1,5 @@
-**GuiltBytes**    
-**Obesity Free USA!**    
+# GuiltBytes   
+***Obesity Free USA!***    
 
 **Inspiration**    
 = In America, 1 every 3 adults is overweight. While brainstorming topic for ShellHacks-2024 we ordered Dunkin at 2 o’clock of the night. Then while eating those donuts, we had a talk on how healthy foods we had earlier today that cross those donuts and coffee. And we realized, we had Burger King in morning and Burger King for lunch. There we got the idea for GuiltBytes - a platform where you log all your unhealthy eatings.
