@@ -23,3 +23,10 @@
 
 ## **What's next for GuiltBytes**    
 = In near future, we are expecting to introduce this feature “GuiltBytes” in Pixel Watch so users can input and track their unhealthy eatings any time anywhere from a click on watch!
+
+---
+
+A ShellHacks2024 Project
+
+---
+* ShellHacks is the annual hackathon of Florida International University
